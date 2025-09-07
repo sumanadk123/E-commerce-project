@@ -1,3 +1,58 @@
+// Planner modal
+const modal = document.getElementById("plannerModal");
+const btn = document.getElementById("planBtn");
+const closeBtn = document.querySelector(".close");
+btn.onclick = () => modal.style.display = "block";
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (event) => {
+  if (event.target == modal) modal.style.display = "none";
+}
+
+// Submit planner form and scroll to gifts
+document.getElementById("plannerSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const occasion = document.getElementById("occasionSelect").value;
+  const timeframe = document.getElementById("timeframe").value;
+
+  if (!occasion || !timeframe) {
+    alert("Please select at least Occasion and Timeframe!");
+    return;
+  }
+
+  modal.style.display = "none"; // Close modal
+
+  const giftsSection = document.getElementById("gifts");
+  if (giftsSection) giftsSection.scrollIntoView({ behavior: "smooth" });
+});
+
+
+    // Curated slider
+  let curatedIndex=0;
+  function slideCurated(dir){
+    const slider=document.getElementById('curatedSlider');
+    const cardWidth=slider.children[0].offsetWidth+12;
+    curatedIndex+=dir;
+    if(curatedIndex<0) curatedIndex=0;
+    if(curatedIndex>slider.children.length-3) curatedIndex=slider.children.length-3;
+    slider.style.transform=`translateX(-${curatedIndex*cardWidth}px)`;
+  }
+
+  // Occasion Tabs
+  function switchOccasionTab(e){
+    document.querySelectorAll('.u-tab').forEach(t=>t.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    const key=e.currentTarget.dataset.tab;
+    document.querySelectorAll('#occasionContent .occasion-panel').forEach(p=>{
+      p.style.display = p.dataset.panel === key ? 'grid' : 'none';
+    });
+  }
+
+
+  // Placeholder functions
+  function quickView(name){alert('Quick view: '+name)}
+  function addToCart(name){alert('Added to cart: '+name)}
+
 // FAQs
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
@@ -11,95 +66,93 @@ document.querySelectorAll('.faq-question').forEach(button => {
     }
   });
 });
+
 // curated packs
 const carousel = document.getElementById('curatedCarousel');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-// Clone first and last cards for infinite loop
-const cards = carousel.querySelectorAll('.card');
-carousel.appendChild(cards[0].cloneNode(true));
-carousel.insertBefore(cards[cards.length-1].cloneNode(true), cards[0]);
-
-let index = 1;
+// Get initial cards
+let cards = Array.from(carousel.children);
 const cardWidth = cards[0].offsetWidth + 24; // width + gap
+
+// Clone first and last two cards for seamless looping
+const cloneFirst = cards.slice(0, 2).map(card => card.cloneNode(true));
+const cloneLast = cards.slice(-2).map(card => card.cloneNode(true));
+
+cloneFirst.forEach(card => carousel.appendChild(card));
+cloneLast.reverse().forEach(card => carousel.insertBefore(card, carousel.firstChild));
+
+// Update cards after cloning
+cards = Array.from(carousel.children);
+
+let index = 2; // start on first real card
 carousel.style.transform = `translateX(${-cardWidth * index}px)`;
 
-// Auto-scroll
-let autoScroll = setInterval(() => {
-  moveToNext();
-}, 7000);
-
-function moveToNext(){
+// Functions
+function moveToNext() {
   index++;
   carousel.style.transition = 'transform 0.5s ease';
   carousel.style.transform = `translateX(${-cardWidth * index}px)`;
 }
 
-function moveToPrev(){
+function moveToPrev() {
   index--;
   carousel.style.transition = 'transform 0.5s ease';
   carousel.style.transform = `translateX(${-cardWidth * index}px)`;
 }
 
+// Reset for infinite loop effect
 carousel.addEventListener('transitionend', () => {
-  if(index === 0){
+  if (index >= cards.length - 2) {
     carousel.style.transition = 'none';
-    index = cards.length;
+    index = 2;
     carousel.style.transform = `translateX(${-cardWidth * index}px)`;
   }
-  if(index === cards.length+1){
+  if (index <= 1) {
     carousel.style.transition = 'none';
-    index = 1;
+    index = cards.length - 3;
     carousel.style.transform = `translateX(${-cardWidth * index}px)`;
   }
 });
 
-// Buttons
-nextBtn.addEventListener('click', () => {
-  clearInterval(autoScroll);
-  moveToNext();
-  autoScroll = setInterval(moveToNext, 3000);
-});
+// Button events
+nextBtn.addEventListener('click', moveToNext);
+prevBtn.addEventListener('click', moveToPrev);
 
-prevBtn.addEventListener('click', () => {
-  clearInterval(autoScroll);
-  moveToPrev();
-  autoScroll = setInterval(moveToNext, 3000);
-});
+// Optional: drag/swipe support
+let startX = 0;
+let isDragging = false;
 
-// Drag/Swipe
-let startX, isDragging = false;
 carousel.addEventListener('mousedown', e => {
-  clearInterval(autoScroll);
-  startX = e.pageX;
   isDragging = true;
+  startX = e.pageX;
   carousel.style.cursor = 'grabbing';
 });
 
 carousel.addEventListener('mousemove', e => {
-  if(!isDragging) return;
-  const x = e.pageX;
-  const walk = x - startX;
+  if (!isDragging) return;
+  const walk = e.pageX - startX;
+  carousel.style.transition = 'none';
   carousel.style.transform = `translateX(${-cardWidth * index + walk}px)`;
 });
 
 carousel.addEventListener('mouseup', e => {
+  if (!isDragging) return;
   isDragging = false;
   carousel.style.cursor = 'grab';
-  const endX = e.pageX;
-  const diff = endX - startX;
-  if(diff > 50) moveToPrev();
-  else if(diff < -50) moveToNext();
+  const diff = e.pageX - startX;
+
+  if (diff > 50) moveToPrev();
+  else if (diff < -50) moveToNext();
   else carousel.style.transform = `translateX(${-cardWidth * index}px)`;
-  autoScroll = setInterval(moveToNext, 3000);
 });
 
 carousel.addEventListener('mouseleave', () => {
   isDragging = false;
   carousel.style.cursor = 'grab';
-  carousel.style.transform = `translateX(${-cardWidth * index}px)`;
-  autoScroll = setInterval(moveToNext, 3000);
 });
+
+
 
 
