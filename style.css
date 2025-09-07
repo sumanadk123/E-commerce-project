@@ -1,4 +1,4 @@
- /* Brand palette */
+    /* Brand palette */
     :root{
       --primary:#FF6F61;
       --primary-700:#e14f45;
@@ -19,8 +19,7 @@
     body{margin:0;background:linear-gradient(180deg,var(--bg),#FBFBFD);color:var(--contrast);-webkit-font-smoothing:antialiased;padding:0}
     .wrap{max-width:var(--max-width);margin:0 auto;padding:18px}
 
-    /* NAV */
-  .nav {
+    .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,12 +30,14 @@
   top:0;
   z-index:100;
 }
+
 /* Brand */
 .brand {
   display: flex;
   align-items: center;
   gap:12px;
 }
+
 .logo {
   width:48px;
   height:48px;
@@ -49,18 +50,21 @@
   font-weight:800;
   font-size:20px;
 }
+
 .brand h1 {
   font-size:22px;
   margin:0;
   font-weight:600;
   color: var(--primary);
 }
+
 /* Nav Links */
 .nav-links {
   display: flex;
   gap:30px;
   align-items: center;
 }
+
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
@@ -69,10 +73,12 @@
   border-radius:6px;
   transition: 0.3s;
 }
+
 .nav-links a:hover {
   color: white;
   background: var(--primary);
 }
+
 /* Buttons */
 .btn {
   border:none;
@@ -82,27 +88,33 @@
   font-weight:700;
   transition:0.3s;
 }
+
 .btn-primary {
   background: var(--primary);
   color:white;
 }
+
 .btn-primary:hover {
   background: var(--hover);
 }
+
 /* Nav Actions */
 .nav-actions {
   display:flex;
   align-items:center;
   gap:16px;
 }
+
 .icon {
   cursor:pointer;
   color: var(--muted);
   transition:0.3s;
 }
+
 .icon:hover {
   color: var(--primary);
 }
+
 select.language, select.location {
   padding:6px 10px;
   border-radius:6px;
@@ -111,6 +123,7 @@ select.language, select.location {
   background:white;
   transition:0.3s;
 }
+
 select.language:hover, select.location:hover {
   border-color: var(--primary);
 }
@@ -128,8 +141,8 @@ select.language:hover, select.location:hover {
     .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
     .confetti{position:absolute;right:8px;top:8px;font-size:22px;opacity:0.95}
 
-  /* PLANNER */
-  /* Modal Background */
+    /* PLANNER */
+    /* Modal Background */
 .modal {
   display: none;
   position: fixed;
@@ -141,6 +154,7 @@ select.language:hover, select.location:hover {
   overflow: auto;
   background-color: rgba(0,0,0,0.5);
 }
+
 /* Modal Card */
 .modal-content {
   background-color: #fff;
@@ -153,10 +167,12 @@ select.language:hover, select.location:hover {
   animation: slideDown 0.4s ease;
   text-align: center;
 }
+
 @keyframes slideDown {
   from { transform: translateY(-50px); opacity:0; }
   to { transform: translateY(0); opacity:1; }
 }
+
 .modal-content h3 {
   margin-bottom: 8px;
   color: var(--primary);
@@ -167,11 +183,13 @@ select.language:hover, select.location:hover {
   color: var(--muted);
   font-size: 16px;
 }
+
 .planner-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
 }
+
 .planner-grid input, 
 .planner-grid select {
   padding: 12px 14px;
@@ -181,23 +199,27 @@ select.language:hover, select.location:hover {
   font-size: 14px;
   transition: 0.3s;
 }
+
 .planner-grid input:focus,
 .planner-grid select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 6px rgba(30,136,229,0.3);
 }
+
 .planner-grid button {
   grid-column: 1 / -1;
   padding: 14px;
   font-weight: 700;
   transition: 0.3s;
 }
+
 .planner-grid button:hover {
   background: var(--hover);
   color: var(--primary);
   border: 2px solid var(--muted);
   box-shadow: 0 0 6px rgba(30,136,229,0.3);
 }
+
 /* Close Button */
 .close {
   color: #aaa;
@@ -207,11 +229,12 @@ select.language:hover, select.location:hover {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .close:hover {
   color: var(--primary);
 }
 
-/* FILTER BAR */
+  /* FILTER BAR */
  .filter-bar {
   display: flex;
   align-items: center;
@@ -219,6 +242,7 @@ select.language:hover, select.location:hover {
   margin-top: 24px;
   flex-wrap: wrap;
 }
+
 /* Tabs container: equally distributed */
 .tabs {
   display: flex;
@@ -226,6 +250,7 @@ select.language:hover, select.location:hover {
   justify-content: space-between;
   gap: 8px;
 }
+
 /* Each tab stretches equally */
 .tab {
   flex: 1;
@@ -238,21 +263,25 @@ select.language:hover, select.location:hover {
   font-weight: 700;
   transition: 0.3s;
 }
+
 .tab:hover {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: white;
   border: none;
 }
+
 .tab.active {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: white;
   border: none;
 }
+
 /* Search wrapper stays right */
 .search-wrapper {
   display: flex;
   gap: 8px;
 }
+
 .search-wrapper input {
   padding: 10px 14px;
   border-radius: 10px;
@@ -260,10 +289,12 @@ select.language:hover, select.location:hover {
   outline: none;
   transition: 0.3s;
 }
+
 .search-wrapper input:focus {
   border-color: var(--primary);
   box-shadow: 0 0 6px rgba(30,136,229,0.3);
 }
+
 .search-wrapper button {
   padding: 10px 16px;
   border-radius: 10px;
@@ -272,7 +303,7 @@ select.language:hover, select.location:hover {
 
     /* PRODUCTS */
     .section{padding:46px 0}
-    .section h3{margin:0 0 18px;font-size:26px}
+    .section h3{margin:0 0 18px;font-size:26px;text-align: center;}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
     .card{background:var(--card);border-radius:12px;padding:12px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:10px;position:relative}
     .thumb{height:160px;border-radius:10px;overflow:hidden}
@@ -292,6 +323,7 @@ select.language:hover, select.location:hover {
     .u-tab{padding:8px 12px;border-radius:10px;background:white;border:1px solid #eee;cursor:pointer}
     .u-tab.active{background:var(--primary);color:white;border:none}
     .occasion-panel{display:none;gap:12px}
+
     @media(max-width:980px){
       .hero{grid-template-columns:1fr}
       .planner-grid{grid-template-columns:1fr}
@@ -306,6 +338,7 @@ select.language:hover, select.location:hover {
   gap: 24px;
   margin-top: 24px;
 }
+
 .card {
   background: #fff;
   border-radius: 16px;
@@ -315,25 +348,30 @@ select.language:hover, select.location:hover {
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 38px rgba(0,0,0,0.12);
 }
+
 .thumb {
   width: 100%;
   height: 180px;
   overflow: hidden;
   border-bottom: 1px solid #eee;
 }
+
 .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
+
 .card:hover .thumb img {
   transform: scale(1.05);
 }
+
 .badges {
   position: absolute;
   top: 12px;
@@ -341,6 +379,7 @@ select.language:hover, select.location:hover {
   display: flex;
   gap: 6px;
 }
+
 .badge {
   background: #FF6F61;
   color: white;
@@ -349,37 +388,44 @@ select.language:hover, select.location:hover {
   font-size: 12px;
   font-weight: 700;
 }
+
 .title {
   font-weight: 800;
   font-size: 16px;
   padding: 12px;
 }
+
 .desc {
   color: #4B5563;
   font-size: 14px;
   padding: 0 12px 12px;
 }
+
 .price-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 12px 12px;
 }
+
 .price {
   font-weight: 900;
   color: #1F2937;
 }
+
 .old {
   text-decoration: line-through;
   color: #9AA0A6;
   font-weight: 700;
   margin-left: 8px;
 }
+
 .actions {
   display: flex;
   gap: 8px;
   padding: 0 12px 12px;
 }
+
 .btn-outline {
   border: 1px solid #E6E6E6;
   background: #fff;
@@ -390,10 +436,12 @@ select.language:hover, select.location:hover {
   font-weight: 600;
   transition: all 0.3s ease;
 }
+
 .btn-outline:hover {
   background: #FF6F61;
   color: #fff;
 }
+
 .btn-primary {
   background: #FF6F61;
   color: white;
@@ -404,6 +452,7 @@ select.language:hover, select.location:hover {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .btn-primary:hover {
   background: #e14f45;
 }
@@ -413,13 +462,16 @@ select.language:hover, select.location:hover {
   position: relative;
   overflow: hidden;
   margin-top: 24px;
+  width: 100%;
 }
+
 .carousel {
   display: flex;
   gap: 24px;
   transition: transform 0.5s ease;
   cursor: grab;
 }
+
 .card {
   background: #fff;
   border-radius: 16px;
@@ -428,39 +480,83 @@ select.language:hover, select.location:hover {
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 38px rgba(0,0,0,0.12);
 }
+
 .thumb {
   width: 100%;
   height: 180px;
   overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
+
 .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
+
 .card:hover .thumb img {
   transform: scale(1.05);
 }
-.badges { position: absolute; top: 12px; left: 12px; }
-.badge { background: #FF6F61; color: white; padding: 4px 8px; border-radius: 8px; font-size: 12px; font-weight: 700; }
-.title { font-weight: 800; font-size: 16px; padding: 12px; }
-.desc { color: #4B5563; font-size: 14px; padding: 0 12px 12px; }
-.price-row { display: flex; align-items: center; padding: 0 12px 12px; }
-.price { font-weight: 900; color: #1F2937; }
-.actions { display: flex; gap: 8px; padding: 0 12px 12px; }
+
+.badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.badge {
+  background: #FF6F61;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.desc {
+  color: #4B5563;
+  font-size: 14px;
+  padding: 0 12px 12px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 12px;
+}
+
+.price {
+  font-weight: 900;
+  color: #1F2937;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border: none;
   padding: 12px;
   border-radius: 50%;
@@ -470,14 +566,37 @@ select.language:hover, select.location:hover {
   transition: all 0.3s ease;
   z-index: 10;
 }
-.carousel-btn:hover { background: #FF6F61; color: #fff; }
-.prev { left: -12px; }
-.next { right: -12px; }
-@media(max-width:980px){
-  .card { min-width: 200px; }
-  .thumb { height: 160px; }
-  .carousel { gap: 16px; }
+
+.carousel-btn:hover {
+  background: #FF6F61;
+  color: #fff;
 }
+
+.prev {
+  left: -12px;
+}
+
+.next {
+  right: -12px;
+}
+
+@media(max-width:980px){
+  .card {
+    min-width: 200px;
+  }
+  .thumb {
+    height: 160px;
+  }
+  .carousel {
+    gap: 16px;
+  }
+}
+
+
+
+
+
+
 
 /* what customers say */
 .customer-says-section {
@@ -485,12 +604,14 @@ select.language:hover, select.location:hover {
   padding: 60px 0;
   font-family: Inter, sans-serif;
 }
+
 .customer-says-section h3 {
   text-align: center;
   font-size: 28px;
   margin-bottom: 40px;
   color: #1F2937;
 }
+
 .customer-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -498,6 +619,7 @@ select.language:hover, select.location:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .customer-card {
   background: #fff;
   border-radius: 16px;
@@ -509,10 +631,12 @@ select.language:hover, select.location:hover {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .customer-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
 }
+
 .cust-thumb {
   width: 80px;
   height: 80px;
@@ -521,21 +645,25 @@ select.language:hover, select.location:hover {
   margin-bottom: 16px;
   border: 2px solid #FFD166;
 }
+
 .cust-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .cust-stars {
   color: #FFB800;
   font-size: 18px;
   margin-bottom: 12px;
 }
+
 .cust-review {
   font-size: 15px;
   color: #4B5563;
   margin-bottom: 14px;
 }
+
 .cust-name {
   font-weight: 700;
   color: #1F2937;
@@ -548,20 +676,24 @@ select.language:hover, select.location:hover {
   padding: 60px 0;
   font-family: Inter, sans-serif;
 }
+
 .faq-section h3 {
   text-align: center;
   font-size: 28px;
   margin-bottom: 40px;
   color: #1F2937;
 }
+
 .faq-list {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .faq-item {
   border-bottom: 1px solid #E6E6E6;
   margin-bottom: 12px;
 }
+
 .faq-question {
   width: 100%;
   text-align: left;
@@ -575,6 +707,7 @@ select.language:hover, select.location:hover {
   color: #1F2937;
   transition: color 0.3s ease;
 }
+
 .faq-question::after {
   content: "➕";
   position: absolute;
@@ -582,9 +715,11 @@ select.language:hover, select.location:hover {
   font-size: 18px;
   transition: transform 0.3s ease;
 }
+
 .faq-question.active::after {
   transform: rotate(45deg);
 }
+
 .faq-answer {
   display: none;
   padding: 0 12px 16px 12px;
@@ -601,6 +736,7 @@ select.language:hover, select.location:hover {
   border-radius: 12px;
   font-family: Inter, sans-serif;
 }
+
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -608,12 +744,14 @@ select.language:hover, select.location:hover {
   max-width: 1200px;
   margin: 0 auto 24px auto;
 }
+
 .footer-col h4 {
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: 700;
   color: #FFD166;
 }
+
 .footer-col a {
   display: block;
   color: #E6E6E6;
@@ -622,14 +760,17 @@ select.language:hover, select.location:hover {
   font-size: 14px;
   transition: color 0.2s ease;
 }
+
 .footer-col a:hover {
   color: #FFD166;
 }
+
 .footer-col p {
   font-size: 14px;
   margin-top: 8px;
   color: #E6E6E6;
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -639,14 +780,17 @@ select.language:hover, select.location:hover {
   font-size: 13px;
   color: #E6E6E6;
 }
+
 .footer-bottom a {
   color: #E6E6E6;
   margin-left: 12px;
   text-decoration: none;
 }
+
 .footer-bottom a:hover {
   color: #FFD166;
 }
+
 @media(max-width: 600px) {
   .footer-bottom {
     flex-direction: column;
@@ -654,4 +798,3 @@ select.language:hover, select.location:hover {
     text-align: center;
   }
 }
-
