@@ -484,40 +484,10 @@
     </div>
   </div>
 </footer>
-
-<script>
-  // Planner scroll
-  function scrollToPlanner(){document.getElementById('planner').scrollIntoView({behavior:'smooth'})}
-
-    // Curated slider
-  let curatedIndex=0;
-  function slideCurated(dir){
-    const slider=document.getElementById('curatedSlider');
-    const cardWidth=slider.children[0].offsetWidth+12;
-    curatedIndex+=dir;
-    if(curatedIndex<0) curatedIndex=0;
-    if(curatedIndex>slider.children.length-3) curatedIndex=slider.children.length-3;
-    slider.style.transform=`translateX(-${curatedIndex*cardWidth}px)`;
-  }
-
-  // Occasion Tabs
-  function switchOccasionTab(e){
-    document.querySelectorAll('.u-tab').forEach(t=>t.classList.remove('active'));
-    e.currentTarget.classList.add('active');
-    const key=e.currentTarget.dataset.tab;
-    document.querySelectorAll('#occasionContent .occasion-panel').forEach(p=>{
-      p.style.display = p.dataset.panel === key ? 'grid' : 'none';
-    });
-  }
-
-
-  // Placeholder functions
-  function quickView(name){alert('Quick view: '+name)}
-  function addToCart(name){alert('Added to cart: '+name)}
-</script>
 <script src="app.js"></script>
 </body>
 </html>
+
 
 
 
