@@ -29,15 +29,100 @@
     .wrap{max-width:var(--max-width);margin:0 auto;padding:18px}
 
     /* NAV */
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 6px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
-    .brand h1{font-size:20px;margin:0}
-    .nav-links{display:flex;gap:14px;align-items:center}
-    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
-    .btn{border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:700}
-    .btn-primary{background:var(--primary);color:white}
-    .btn-outline{background:white;border:1px solid #E6E6E6}
+  .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top:0;
+  z-index:100;
+}
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap:12px;
+}
+.logo {
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  background: linear-gradient(135deg,var(--primary),var(--secondary));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:800;
+  font-size:20px;
+}
+.brand h1 {
+  font-size:22px;
+  margin:0;
+  font-weight:600;
+  color: var(--primary);
+}
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap:30px;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:6px;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: white;
+  background: var(--primary);
+}
+/* Buttons */
+.btn {
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+  transition:0.3s;
+}
+.btn-primary {
+  background: var(--primary);
+  color:white;
+}
+.btn-primary:hover {
+  background: var(--hover);
+}
+/* Nav Actions */
+.nav-actions {
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.icon {
+  cursor:pointer;
+  color: var(--muted);
+  transition:0.3s;
+}
+.icon:hover {
+  color: var(--primary);
+}
+select.language, select.location {
+  padding:6px 10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  cursor:pointer;
+  background:white;
+  transition:0.3s;
+}
+select.language:hover, select.location:hover {
+  border-color: var(--primary);
+}
 
     /* HERO */
     .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:28px 0}
@@ -52,19 +137,147 @@
     .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
     .confetti{position:absolute;right:8px;top:8px;font-size:22px;opacity:0.95}
 
-    /* PLANNER */
-    .planner-section{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--shadow-sm);margin-top:-40px;position:relative;z-index:6}
-    .planner-grid{display:grid;grid-template-columns:1fr 200px;gap:12px;align-items:center}
-    .planner-grid input,.planner-grid select{padding:12px;border-radius:10px;border:1px solid #E8E8E8}
-    .planner-grid .btn-primary{width:100%;padding:12px}
+  /* PLANNER */
+  /* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+/* Modal Card */
+.modal-content {
+  background-color: #fff;
+  margin: 6% auto;
+  padding: 32px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: slideDown 0.4s ease;
+  text-align: center;
+}
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity:0; }
+  to { transform: translateY(0); opacity:1; }
+}
+.modal-content h3 {
+  margin-bottom: 8px;
+  color: var(--primary);
+}
 
-    /* FILTER BAR */
-    .filter-bar{display:flex;gap:12px;align-items:center;margin-top:22px}
-    .tabs{display:flex;gap:8px;flex-wrap:wrap}
-    .tab{padding:8px 12px;border-radius:999px;background:white;border:1px solid #eee;cursor:pointer;font-weight:700}
-    .tab.active{background:linear-gradient(90deg,var(--primary),var(--secondary));color:white;border:none}
-    .search-wrapper{margin-left:auto;display:flex;gap:8px}
-    .search-wrapper input{padding:10px;border-radius:10px;border:1px solid #E6E6E6}
+.modal-content p {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.planner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+.planner-grid input, 
+.planner-grid select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.planner-grid input:focus,
+.planner-grid select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(30,136,229,0.3);
+}
+.planner-grid button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.planner-grid button:hover {
+  background: var(--hover);
+  color: var(--primary);
+  border: 2px solid var(--muted);
+  box-shadow: 0 0 6px rgba(30,136,229,0.3);
+}
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover {
+  color: var(--primary);
+}
+
+/* FILTER BAR */
+ .filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+/* Tabs container: equally distributed */
+.tabs {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 8px;
+}
+/* Each tab stretches equally */
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid #eee;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.tab:hover {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+}
+.tab.active {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+}
+/* Search wrapper stays right */
+.search-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.search-wrapper input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #E6E6E6;
+  outline: none;
+  transition: 0.3s;
+}
+.search-wrapper input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(30,136,229,0.3);
+}
+.search-wrapper button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+}
 
     /* PRODUCTS */
     .section{padding:46px 0}
@@ -102,18 +315,49 @@
 
   <!-- NAV -->
   <header class="nav">
-    <div class="brand">
-      <div class="logo">S</div>
-      <h1>LastMinuteMagic</h1>
+  <div class="brand">
+    <div class="logo">S</div>
+    <h1>SurpriseShop</h1>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#gifts">Gifts</a>
+    <a href="#services">Services</a>
+    <a href="#bestsellers">Best Sellers</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#gifts">Contact</a>
+    <button class="btn btn-primary" id="planBtn">Plan Now</button>
+  </nav>
+
+  <div class="nav-actions">
+    <div class="icon" title="Notifications">
+      <svg width="24" height="24" fill="currentColor">
+        <path d="M12 24c1.1 0 2-.9 2-2H10c0 1.1.9 2 2 2zm6-6v-5c0-3.1-1.6-5.6-4.5-6.3V6c0-.8-.7-1.5-1.5-1.5S10 5.2 10 6v.7C7.1 7.4 5.5 9.9 5.5 13v5l-1.5 1.5V20h16v-.5L18 18z"/>
+      </svg>
     </div>
-    <div class="nav-links">
-      <a href="#gifts">Gifts</a>
-      <a href="#services">Services</a>
-      <a href="#bestsellers">Best Sellers</a>
-      <a href="#reviews">Reviews</a>
-      <button class="btn btn-primary" onclick="scrollToPlanner()">Plan Now</button>
+    <div class="icon" title="Cart">
+      <svg width="24" height="24" fill="currentColor">
+        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14l.84-2h8.72l3-6H6.21l-.59-2H1v2h3l3.6 7.59-1.35 2.44C6.16 14.72 6 15 6 15h12v-2H7.16z"/>
+      </svg>
     </div>
-  </header>
+    <!-- <div class="icon" title="Contact Us">
+      <svg width="24" height="24" fill="currentColor">
+        <path d="M21 8V7l-3 2-2-2-3 2-2-2-3 2-2-2-3 2v1l3-2 2 2 3-2 2 2 3-2 2 2 3-2z"/>
+      </svg>
+    </div> -->
+    <select class="language">
+      <option value="en">EN</option>
+      <option value="th">TH</option>
+    </select>
+    <select class="location">
+      <option value="bangkok">Bangkok</option>
+      <option value="chiangmai">Chiang Mai</option>
+      <option value="phuket">Phuket</option>
+      <option value="khonkean">Khon Kaen</option>
+    </select>
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero" aria-label="hero">
@@ -136,42 +380,50 @@
   </section>
 
   <!-- PLANNER -->
-  <section id="planner" class="planner-section">
-    <h3 style="text-align:center">Plan Your Surprise in Seconds</h3>
-    <p style="text-align:center;color:var(--muted)">Simply choose your basics, and we'll show you fast, expertly-selected options ready for delivery.</p>
-    <div class="planner-grid" style="margin-top:12px">
+  <div id="plannerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Plan Your Surprise in Seconds</h3>
+    <p>Select the basics and we’ll show fast, curated options ready for delivery.</p>
+
+    <div class="planner-grid">
       <select id="occasionSelect">
+        <option value="">Select Occasion</option>
         <option>Birthday</option>
         <option>Anniversary</option>
         <option>Congrats</option>
         <option>Just Because</option>
       </select>
+
       <input id="recipient" type="text" placeholder="Recipient (optional)">
-      <input id="city" type="text" placeholder="City / area">
+      <input id="city" type="text" placeholder="City / Area">
+
       <select id="timeframe">
-        <option>ASAP (under 7 hours)</option>
+        <option value="">Select Timeframe</option>
+        <option>ASAP (under 2 hours)</option>
         <option>Same day</option>
         <option>Next day</option>
       </select>
+
       <button class="btn btn-primary" id="plannerSubmit">Find Options</button>
     </div>
-  </section>
-
-  <!-- FILTER BAR -->
-  <div class="filter-bar" style="margin-top:24px">
-    <div class="tabs" role="tablist">
-      <div class="tab active" data-filter="all" onclick="filterSet(event)">All</div>
-      <div class="tab" data-filter="birthday" onclick="filterSet(event)">🎂 Birthday</div>
-      <div class="tab" data-filter="romance" onclick="filterSet(event)">❤️ Romance</div>
-      <div class="tab" data-filter="congrats" onclick="filterSet(event)">🎉 Congrats</div>
-      <div class="tab" data-filter="quick" onclick="filterSet(event)">⚡ Quick Picks</div>
-      <div class="tab" data-filter="bestseller" onclick="filterSet(event)">🌟 Best Sellers</div>
-    </div>
-    <div class="search-wrapper">
-      <input id="search" placeholder="Search gifts, kits or ideas..." />
-      <button class="btn btn-primary" onclick="applySearch()">Search</button>
-    </div>
   </div>
+</div>
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+  <div class="tabs" role="tablist">
+    <div class="tab active" data-filter="all" onclick="filterSet(event)">🌟 Best Sellers</div>
+    <div class="tab" data-filter="birthday" onclick="filterSet(event)">🎂 Birthday</div>
+    <div class="tab" data-filter="romance" onclick="filterSet(event)">❤️ Romance</div>
+    <div class="tab" data-filter="congrats" onclick="filterSet(event)">🎉 Congrats</div>
+    <div class="tab" data-filter="quick" onclick="filterSet(event)">⚡ Quick Picks</div>
+    <div class="tab" data-filter="bestseller" onclick="filterSet(event)">All</div>
+  </div>
+  <div class="search-wrapper">
+    <input id="search" placeholder="Search gifts, kits or ideas..." />
+    <button class="btn btn-primary" onclick="applySearch()">Search</button>
+  </div>
+</div>
 
   <!-- BEST SELLERS -->
   <section id="bestsellers-section" class="section">
@@ -528,6 +780,7 @@
 <script src="app.js"></script>
 </body>
 </html>
+
 
 
 
