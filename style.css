@@ -600,6 +600,9 @@ select.language:hover, select.location:hover {
   font-weight: 600;
   transition: all 0.3s ease;
 }
+.btn-outline a{
+    text-decoration:none;
+}
 
 .btn-outline:hover {
   background: #FF6F61;
@@ -962,4 +965,5 @@ select.language:hover, select.location:hover {
     text-align: center;
   }
 }
+
 
