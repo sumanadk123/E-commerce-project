@@ -288,11 +288,14 @@ select.language, select.location {
 select.language:hover, select.location:hover {
   border-color: var(--primary);
 }
+.hero-ctas{
+  padding-top: 5%;
+}
 
     /* HERO */
     .hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:28px 0}
     .hero-left{padding:12px}
-    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--accent);font-weight:800;color:var(--contrast);margin-bottom:12px}
+    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--primary);font-weight:800;color:var(--contrast);margin-bottom:12px}
     .hero-left h2{font-size:36px;margin:0 0 12px}
     .hero-left p{color:var(--muted);max-width:520px}
     .hero-ctas{display:flex;gap:12px;margin-top:14px}
