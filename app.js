@@ -153,6 +153,46 @@ carousel.addEventListener('mouseleave', () => {
   carousel.style.cursor = 'grab';
 });
 
+// Authentication
+const authBtn = document.getElementById('authSignInBtn');
+  const authModal = document.getElementById('auth-modal');
+  const authClose = document.getElementById('authClose');
+  const authTabBtns = document.querySelectorAll('.auth-tab-btn');
+  const authForms = document.querySelectorAll('.auth-form');
+
+  // Open Modal
+  authBtn.addEventListener('click', () => {
+    authModal.style.display = 'flex';
+  });
+
+  // Close Modal
+  authClose.addEventListener('click', () => {
+    authModal.style.display = 'none';
+  });
+
+  // Close when clicking outside the modal
+  window.addEventListener('click', (e) => {
+    if (e.target === authModal) {
+      authModal.style.display = 'none';
+    }
+  });
+
+  // Switch between Sign In and Sign Up tabs
+  authTabBtns.forEach(button => {
+    button.addEventListener('click', () => {
+      authTabBtns.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const tab = button.getAttribute('data-tab');
+      authForms.forEach(form => {
+        form.classList.remove('active');
+        if (form.id === `auth-${tab}-form`) {
+          form.classList.add('active');
+        }
+      });
+    });
+  });
+
 
 
 
