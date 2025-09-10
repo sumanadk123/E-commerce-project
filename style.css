@@ -603,7 +603,9 @@ select.language:hover, select.location:hover {
 .btn-outline a{
     text-decoration:none;
 }
-
+a{
+    text-decoration: none;
+}
 .btn-outline:hover {
   background: #FF6F61;
   color: #fff;
@@ -965,5 +967,6 @@ select.language:hover, select.location:hover {
     text-align: center;
   }
 }
+
 
 
