@@ -57,7 +57,7 @@
 .brand h1 {
   font-size:22px;
   margin:0;
-  font-weight:600;
+  font-weight:800;
   color: var(--primary);
 }
 
@@ -831,4 +831,5 @@ select.language:hover, select.location:hover {
 }
 .auth-divider::after {
   right: 0;
+
 }
