@@ -91,7 +91,8 @@ const products = [
       { item: "Flower bouquet", price: 500 },
       { item: "snack or candy", price: 500 },
       { item: "Handwritten note", price: 300 },
-      { item: "Wrapped big box", price: 350 }
+      { item: "Wrapped puzzle box", price: 350 },
+      { item: "Confetti and balloon pop", price: 350 }
     ],
     delivery: {
       "Delivery Time": "Within 10hrs",
@@ -113,6 +114,7 @@ const products = [
       { item: "LED tealight", price: 300 },
       { item: "Handwritten love letter", price: 300 },
       { item: "Mini plush toy", price: 300 },
+      { item: "One Video Capture & Highlight Reel", price: 300 },
       { item: "Heart shaped mini decorated setup", price: 1500 }
     ],
     delivery: {
@@ -134,7 +136,8 @@ const products = [
       { item: "LED fairy lights", price: 500 },
       { item: "Snack pack", price: 500 },
       { item: "Reusable utensils", price: 200 },
-      { item: "Setup with mini balloons, confetti bag", price: 550 }
+      { item: "Setup with mini balloons and confetti bag", price: 550 },
+      { item: "One video capture reel", price: 300 },
     ],
     delivery: {
       "Delivery Time": "Same day delivery available",
@@ -266,6 +269,7 @@ if (product) {
     <p>Sorry, the product you're looking for was not found.</p>
   `;
 }
+
 
 
 
