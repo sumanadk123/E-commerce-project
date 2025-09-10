@@ -82,16 +82,16 @@ const products = [
   {
     id: "blind-box",
     name: "Blind Box Surprise",
-    price: 3290,
-    oldPrice: 3990,
+    price: 3650,
+    oldPrice: 4000,
     image: "images/blindbox.jpg",
     description: "A mystery-themed box where the recipient doesn’t know what’s inside—perfect for thrill and excitement.",
     inclusions: [
-      { item: "3-4 mini keychains,figurines", price: 770 },
-      { item: "1 snack or candy", price: 495 },
+      { item: "mini figurines or Blind Box", price: 2000 },
+      { item: "Flower bouquet", price: 500 },
+      { item: "snack or candy", price: 500 },
       { item: "Handwritten note", price: 300 },
-      { item: "Wrapped big box", price: 1000 },
-      { item: "Puzzle lock", price: 1000 },
+      { item: "Wrapped big box", price: 350 },
     ],
     delivery: {
       "Delivery Time": "Within 10hrs",
@@ -103,17 +103,17 @@ const products = [
   {
     id: "proposal",
     name: "Proposal Surprise",
-    price: 2490,
-    oldPrice: 2990,
+    price: 3600,
+    oldPrice: 4100,
     image: "images/red.jpg",
     description: "Mini romantic setup for a loved one, ideal for a proposal, anniversary, or just expressing love. The romantic micro-experience; surprise reveals thoughtfulness and effort.",
     inclusions: [
-      { item: "Fresh flower bouquet", price: 770 },
-      { item: "Tiny chocolate box", price: 495 },
-      { item: "LED tealight", price: 50 },
-      { item: "Handwritten love letter", price: 100 },
-      { item: "Mini plush toy", price: 200 },
-      { item: "Heart shaped mini decorated setup", price: 200 },
+      { item: "Fresh flower bouquet", price: 700 },
+      { item: "Tiny chocolate box", price: 500 },
+      { item: "LED tealight", price: 300 },
+      { item: "Handwritten love letter", price: 300 },
+      { item: "Mini plush toy", price: 300 },
+      { item: "Heart shaped mini decorated setup", price: 1500 },
     ],
     delivery: {
       "Delivery Time": "Same day delivery available",
@@ -125,22 +125,22 @@ const products = [
   {
     id: "mini-outdoor",
     name: "Mini Outdoor Surprise",
-    price: 2490,
-    oldPrice: 2990,
+    price: 2000,
+    oldPrice: 2500,
     image: "images/outdoor.jpg",
     description: "Compact, ready-to-use picnic kit for small hangouts or romantic dates.",
     inclusions: [
-      { item: "Mini foldable blanket", price: 270 },
-      { item: "LED fairy lights", price: 495 },
-      { item: "Snack pack", price: 50 },
-      { item: "Reusable utensils", price: 100 },
-      { item: "Setup with mini balloons, confetti bag", price: 200 },
+      { item: "Mini foldable blanket", price: 250 },
+      { item: "LED fairy lights", price: 500 },
+      { item: "Snack pack", price: 500 },
+      { item: "Reusable utensils", price: 200 },
+      { item: "Setup with mini balloons, confetti bag", price: 550 },
     ],
     delivery: {
       "Delivery Time": "Same day delivery available",
       "Location": "Our provided area",
-      "People"  : "5-10 people available",
-      "Service Area": "Bangkok, Pattaya, Phuket",
+      "People"  : "3-5 people available",
+      "Service Area": "Bangkok, Chiang Mai, Phuket",
       "Delivery Fee": "Calculated at checkout",
       "Service": "Our team included for extra services"
     }
@@ -148,17 +148,18 @@ const products = [
   {
   id: "magical-midnight",
   name: "Magical Midnight Surprise",
-  price: 3490,
-  oldPrice: 3990,
+  price: 5200,
+  oldPrice: 5800,
   image: "images/bdaysurprise.jpg",
   description: "A dreamy midnight setup with romantic lights, snacks, and heartfelt touches, perfect for late-night surprises or anniversaries.",
   inclusions: [
-    { item: "Mini fairy light canopy setup", price: 850 },
-    { item: "Small candle set (LED tealights)", price: 250 },
-    { item: "Midnight snack basket (drinks & treats)", price: 400 },
-    { item: "Mini bouquet with ribbon", price: 590 },
-    { item: "Personalized handwritten love note", price: 150 },
-    { item: "Setup with balloons & rose petals", price: 300 }
+    { item: "Mini fairy light setup", price: 700 },
+    { item: "Small candle set (LED tealights)", price: 300 },
+    { item: "Midnight snack basket (drinks & treats)", price: 800 },
+    { item: "Mini bouquet with ribbon", price: 600 },
+    { item: "Personalized handwritten love note", price: 300 },
+    { item: "Setup with balloons & rose petals", price: 500 }
+    { item: "Personalized Gifts", price: 2000 }
   ],
   delivery: {
     "Delivery Time": "Same day or scheduled night delivery",
@@ -171,42 +172,40 @@ const products = [
 },
 {
   id: "plant",
-  name: "Plant Proposal Surprise",
-  price: 4590,
-  oldPrice: 4990,
+  name: "Plant Surprise",
+  price: 2900,
+  oldPrice: 3500,
   image: "images/plant.jpg",
   description: "A unique and eco-friendly proposal setup using beautiful potted plants and floral decor, perfect for nature lovers.",
   inclusions: [
-    { item: "Personalized proposal plant (engraved pot or tag)", price: 790 },
-    { item: "Small succulent collection (3 mini plants)", price: 450 },
-    { item: "Mini candle and lantern set", price: 350 },
+    { item: "Personalized plant (engraved pot or tag)", price: 1000},
+    { item: "Small succulent collection (3 mini plants)", price: 750 },
     { item: "Decor setup with floral elements and greenery", price: 850 },
-    { item: "Custom message card with romantic design", price: 200 },
-    { item: "Mini picnic snack pack for two", price: 300 }
+    { item: "Custom message card with romantic design", price: 300 },
   ],
   delivery: {
     "Delivery Time": "Scheduled delivery (advance booking required)",
     "Location": "Indoor balcony, garden, or park area",
     "People": "2-4 people for setup and assistance",
-    "Service Area": "Bangkok, Pattaya, Phuket",
+    "Service Area": "Bangkok, ChiangMai, Phuket",
     "Delivery Fee": "Calculated at checkout",
-    "Service": "Full proposal setup with our team assistance"
+    "Service": "Full setup with our team assistance"
   }
 },
 {
   id: "puzzle",
   name: "Solve the Puzzle Surprise",
-  price: 2790,
-  oldPrice: 3290,
+  price: 5500,
+  oldPrice: 6200,
   image: "images/puzzle box.jpg",
   description: "An interactive surprise experience where the recipient must solve fun puzzles and clues to reveal their gifts step-by-step.",
   inclusions: [
-    { item: "Puzzle cards and riddles set", price: 250 },
-    { item: "Personalized treasure box for final reveal", price: 600 },
-    { item: "2-3 mini gifts inside the treasure box", price: 900 },
-    { item: "Decorative clue envelopes and accessories", price: 180 },
-    { item: "QR code with digital message or video", price: 120 },
-    { item: "Setup with small props and decorations", price: 250 }
+    { item: "Puzzle cards and riddles set", price: 500 },
+    { item: "Personalized treasure box", price: 1500 },
+    { item: "2-3 mini gifts inside the treasure box", price: 1000 },
+    { item: "Decorative clue envelopes and accessories", price: 500 },
+    { item: "QR code with digital message or video", price: 1500 },
+    { item: "Setup with small props and decorations", price: 5000 }
   ],
   delivery: {
     "Delivery Time": "Same day delivery available",
@@ -267,5 +266,6 @@ if (product) {
     <p>Sorry, the product you're looking for was not found.</p>
   `;
 }
+
 
 
