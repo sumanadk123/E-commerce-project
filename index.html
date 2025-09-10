@@ -155,23 +155,74 @@
 </header>
 
   <!-- HERO -->
-  <section class="hero" aria-label="hero">
-    <div class="hero-left">
-      <span class="eyebrow">Same-Day Surprises, Delivered.</span>
-      <h2>Turning last minutes into forever memories.</h2>
-      <h3 style="padding-top: 10%;">You have the vision. We have the magic.</h3>
-      <div class="hero-ctas">
-        <button class="btn btn-primary" onclick="location.href='#gifts'">Plan a Surprise</button>
+<section class="hero" aria-label="hero">
+  <div class="hero-slider-wrapper">
+    <div class="hero-slider">
+      
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <span class="eyebrow">Surprise in 60 Minutes</span>
+          <h2>Turn Last Minutes Into Forever Memories</h2>
+          <p>Gifts and surprise experiences delivered fast — for friends, family, and special someone.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="location.href='#gifts'">Explore</button>
+            <!-- <button class="btn btn-outline" onclick="scrollToPlanner()">Planner</button> -->
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-card">
+            <img src="images/home3.jpg" alt="Friends celebrating">
+          </div>
+        </div>
       </div>
-      <div style="margin-top:14px;color:var(--muted);font-weight:700">• Same‑day delivery &nbsp; • Curated kits &nbsp; • Surprise coordination</div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-image">
-        <img src="images/home1.jpg" alt="Friends celebrating" />
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <span class="eyebrow">Curated Kits</span>
+          <h2>Ready-Made Surprise Kits</h2>
+          <p>Everything you need for a perfect celebration — hassle-free, beautifully designed, and fast.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary">Explore</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-card">
+            <img src="images/home2.jpg" alt="Celebration Kit">
+          </div>
+        </div>
       </div>
-      <div class="confetti">🎊 🎉</div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <span class="eyebrow">Last Minute Magic</span>
+          <h2>Same-Day Delivery Surprises</h2>
+          <p>Send joy and love instantly — because special moments can't wait.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary">Start Now</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="image-card">
+            <img src="images/home1.jpg" alt="Quick Delivery Surprise">
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+
+    <!-- Controls -->
+    <div class="slider-controls">
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+    </div>
+  </div>
+</section>
 
   <!-- PLANNER -->
   <div id="plannerModal" class="modal">
@@ -282,7 +333,7 @@
       <div class="badges"><span class="badge">Popular</span></div>
       <div class="title">Memory Box</div>
       <div class="desc">A beautifully crafted box that tells your unique story, filled with personalized keepsakes, photos, and gifts.</div>
-      <div class="price-row"><span class="price">฿42</span></div>
+      <div class="price-row"><span class="price">฿3000</span></div>
       <div class="actions"><a href="Viewdetail.html?id=magical-midnight" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
     </div>
       
@@ -291,7 +342,7 @@
       <div class="badges"><span class="badge">Bestseller</span></div>
       <div class="title">Candle Light Dinner</div>
       <div class="desc">A perfectly romantic evening with a prepared meal, beverages, and candles for the perfect ambiance.</div>
-      <div class="price-row"><span class="price">฿49</span><span class="old">฿59</span></div>
+      <div class="price-row"><span class="price">฿5000</span><span class="old">฿59</span></div>
       <div class="actions"><a href="Viewdetail.html?id=candle-dinner" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
     </div>
 
@@ -300,7 +351,7 @@
       <div class="badges"><span class="badge">Bestseller</span></div>
       <div class="title">Birthday Surprise</div>
       <div class="desc">A joyful, stress-free birthday surprise with a custom cake, balloons, a banner, and a personalized gift.</div>
-      <div class="price-row"><span class="price">฿25</span></div>
+      <div class="price-row"><span class="price">฿3000</span></div>
       <div class="actions"><a href="Viewdetail.html?id=birthday" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
     </div>
 
@@ -309,7 +360,7 @@
       <div class="badges"><span class="badge">Popular</span></div>
       <div class="title">Gender Reveal Planning</div>
       <div class="desc">Custom-planned surprise for beloved ones, with themed decorations and a reveal item like confetti cannons.</div>
-      <div class="price-row"><span class="price">฿29</span><span class="old">฿39</span></div>
+      <div class="price-row"><span class="price">฿4000</span><span class="old">฿39</span></div>
       <div class="actions"><a href="Viewdetail.html?id=magical-midnight" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
     </div>
   </div>
@@ -330,7 +381,7 @@
         <div class="badges"><span class="badge">Quick Pick</span></div>
         <div class="title">Love Letter Kit</div>
         <div class="desc">Handwritten notes + keepsake box</div>
-        <div class="price-row"><span class="price">฿19</span></div>
+        <div class="price-row"><span class="price">฿1000</span></div>
         <div class="actions"><a href="Viewdetail.html?id=puzzle" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
       </div>
 
@@ -342,7 +393,7 @@
         <div class="badges"><span class="badge">Quick Pick</span></div>
         <div class="title">Snack Basket</div>
         <div class="desc">Assorted gourmet snacks and treats</div>
-        <div class="price-row"><span class="price">฿27</span></div>
+        <div class="price-row"><span class="price">฿2000</span></div>
         <div class="actions"><a href="Viewdetail.html?id=plant" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
       </div>
 
@@ -354,7 +405,7 @@
         <div class="badges"><span class="badge">Quick Pick</span></div>
         <div class="title">Flower Bouquet</div>
         <div class="desc">Fresh seasonal flowers arranged elegantly</div>
-        <div class="price-row"><span class="price">฿34</span></div>
+        <div class="price-row"><span class="price">฿600</span></div>
         <div class="actions"><a href="Viewdetail.html?id=mini-outdoor" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
       </div>
 
@@ -366,7 +417,7 @@
         <div class="badges"><span class="badge">Quick Pick</span></div>
         <div class="title">Mini Gift Hamper</div>
         <div class="desc">Decor, treats, and mini surprise items</div>
-        <div class="price-row"><span class="price">฿29</span></div>
+        <div class="price-row"><span class="price">฿3000</span></div>
         <div class="actions"><a href="Viewdetail.html?id=puzzle" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
       </div>
 
@@ -378,7 +429,7 @@
         <div class="badges"><span class="badge">Quick Pick</span></div>
         <div class="title">Cookie Gift Box</div>
         <div class="desc">A sweet surprise! A box filled with a delicious assortment of gourmet cookies, perfect for any occasion.</div>
-        <div class="price-row"><span class="price">฿22</span></div>
+        <div class="price-row"><span class="price">฿1000</span></div>
         <div class="actions"><a href="Viewdetail.html?id=puzzle" class="btn btn-outline">View</a><button class="btn btn-primary">Add</button></div>
       </div>
     </div>
@@ -419,65 +470,65 @@
       </div>
       <div class="occasion-panel" data-panel="self" style="display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
         <div class="card">
-          <div class="thumb"><img src="balloonbox.jpg" alt="Spa Day Kit"></div>
-          <div class="title">Spa Day Kit</div>
-          <div class="desc">A relaxing and luxurious kit including face masks, lotions, candles, and more.</div>
-          <div class="price-row"><span class="price">฿800</span></div>
+          <div class="thumb"><img src="images/book.jpg" alt="Book"></div>
+          <div class="title">Blind Date with a Book</div>
+          <div class="desc">Wrapped mystery books, craft kits, or puzzles chosen by theme (romance, thriller, art, DIY).</div>
+          <div class="price-row"><span class="price">฿500</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
         <div class="card">
-          <div class="thumb"><img src="mysteryinside.jpg" alt="Flower Bouquet"></div>
-          <div class="title">Flower Bouquet</div>
-          <div class="desc">A stunning, hand-arranged bouquet of fresh seasonal flowers with a personalized card.</div>
-          <div class="price-row"><span class="price">฿1890</span></div>
+          <div class="thumb"><img src="images/self aff.jpg" alt="Self Box"></div>
+          <div class="title">Affirmation & Motivation Kit</div>
+          <div class="desc">Daily motivational notes, affirmations, or journals with surprise uplifting quotes inside.</div>
+          <div class="price-row"><span class="price">฿800</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
       </div>
       <div class="occasion-panel" data-panel="family" style="display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
         <div class="card">
-          <div class="thumb"><img src="balloonpop.jpg" alt="Spa Day Kit"></div>
-          <div class="title">Spa Day Kit</div>
-          <div class="desc">A relaxing and luxurious kit including face masks, lotions, candles, and more.</div>
+          <div class="thumb"><img src="images/puzzle.jpg" alt="puzzle"></div>
+          <div class="title">Puzzle & Craft Box</div>
+          <div class="desc">Family puzzle, LEGO set, or DIY craft materials that encourage teamwork and creativity.</div>
           <div class="price-row"><span class="price">฿1000</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
         <div class="card">
-          <div class="thumb"><img src="men.jpg" alt="Flower Bouquet"></div>
-          <div class="title">Flower Bouquet</div>
-          <div class="desc">A stunning, hand-arranged bouquet of fresh seasonal flowers with a personalized card.</div>
-          <div class="price-row"><span class="price">฿2500</span></div>
+          <div class="thumb"><img src="images/memo jar kit.jpg" alt="memo jar"></div>
+          <div class="title">Memory Jar Kit</div>
+          <div class="desc">A decorated jar with family prompt cards (e.g., “favorite memory,” “funniest moment”) to build a treasure of shared stories</div>
+          <div class="price-row"><span class="price">฿300</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
       </div>
       <div class="occasion-panel" data-panel="friends" style="display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
         <div class="card">
-          <div class="thumb"><img src="birthdays.jpg" alt="Spa Day Kit"></div>
-          <div class="title">Spa Day Kit</div>
-          <div class="desc">A relaxing and luxurious kit including face masks, lotions, candles, and more.</div>
-          <div class="price-row"><span class="price">฿3800</span></div>
+          <div class="thumb"><img src="images/friend box.jpg" alt="bestie"></div>
+          <div class="title">Bestie Memory Box</div>
+          <div class="desc">Photos, friendship letters, inside jokes, and little keepsakes that celebrate the friendship.</div>
+          <div class="price-row"><span class="price">฿1000</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
         <div class="card">
-          <div class="thumb"><img src="chocolate.jpg" alt="Flower Bouquet"></div>
-          <div class="title">Flower Bouquet</div>
-          <div class="desc">A stunning, hand-arranged bouquet of fresh seasonal flowers with a personalized card.</div>
-          <div class="price-row"><span class="price">฿1799</span></div>
+          <div class="thumb"><img src="images/DIY.jpg" alt="DIY"></div>
+          <div class="title">DIY Craft & Chill Kit</div>
+          <div class="desc">Friendship bracelet kits, painting sets, or candle-making materials for a creative hangout.</div>
+          <div class="price-row"><span class="price">฿1500</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
       </div>
       <div class="occasion-panel" data-panel="kids" style="display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
         <div class="card">
-          <div class="thumb"><img src="kids.jpg" alt="Spa Day Kit"></div>
-          <div class="title">Spa Day Kit</div>
+          <div class="thumb"><img src="images/advanture activity box.jpg" alt="advanture"></div>
+          <div class="title">Adventure Activity Box</div>
           <div class="desc">A relaxing and luxurious kit including face masks, lotions, candles, and more.</div>
-          <div class="price-row"><span class="price">฿800</span></div>
+          <div class="price-row"><span class="price">฿700</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
         <div class="card">
-          <div class="thumb"><img src="red.jpg" alt="Flower Bouquet"></div>
-          <div class="title">Flower Bouquet</div>
-          <div class="desc">A stunning, hand-arranged bouquet of fresh seasonal flowers with a personalized card.</div>
-          <div class="price-row"><span class="price">฿5000</span></div>
+          <div class="thumb"><img src="images/cartoon box.jpg" alt="cartoon"></div>
+          <div class="title">Cartoon Character Box</div>
+          <div class="desc">Mystery items (toys, stationery, stickers) based on popular kids’ characters (Disney, Pokémon, etc.)</div>
+          <div class="price-row"><span class="price">฿3000</span></div>
           <div class="actions"><button class="btn btn-outline">View</button><button class="btn btn-primary">Add</button></div>
         </div>
       </div>
