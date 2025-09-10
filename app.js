@@ -1,3 +1,35 @@
+// hero banner section
+const slides = document.querySelectorAll('.hero-slide');
+const slider = document.querySelector('.hero-slider');
+const nextbtn = document.querySelector('.next');
+const prevbtn = document.querySelector('.prev');
+
+let currentIndex = 0;
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === currentIndex);
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlider();
+}
+
+nextbtn.addEventListener('click', nextSlide);
+prevbtn.addEventListener('click', prevSlide);
+
+// Auto slide
+setInterval(nextSlide, 5000);
+
+updateSlider();
 // Planner modal
 const modal = document.getElementById("plannerModal");
 const btn = document.getElementById("planBtn");
