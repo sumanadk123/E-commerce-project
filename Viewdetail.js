@@ -82,8 +82,8 @@ const products = [
   {
     id: "blind-box",
     name: "Blind Box Surprise",
-    price: 3650,
-    oldPrice: 4000,
+    price: 4000,
+    oldPrice: 4500,
     image: "images/blindbox.jpg",
     description: "A mystery-themed box where the recipient doesn’t know what’s inside—perfect for thrill and excitement.",
     inclusions: [
@@ -269,6 +269,7 @@ if (product) {
     <p>Sorry, the product you're looking for was not found.</p>
   `;
 }
+
 
 
 
