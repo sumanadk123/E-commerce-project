@@ -91,7 +91,7 @@ const products = [
       { item: "Flower bouquet", price: 500 },
       { item: "snack or candy", price: 500 },
       { item: "Handwritten note", price: 300 },
-      { item: "Wrapped big box", price: 350 },
+      { item: "Wrapped big box", price: 350 }
     ],
     delivery: {
       "Delivery Time": "Within 10hrs",
@@ -113,7 +113,7 @@ const products = [
       { item: "LED tealight", price: 300 },
       { item: "Handwritten love letter", price: 300 },
       { item: "Mini plush toy", price: 300 },
-      { item: "Heart shaped mini decorated setup", price: 1500 },
+      { item: "Heart shaped mini decorated setup", price: 1500 }
     ],
     delivery: {
       "Delivery Time": "Same day delivery available",
@@ -134,7 +134,7 @@ const products = [
       { item: "LED fairy lights", price: 500 },
       { item: "Snack pack", price: 500 },
       { item: "Reusable utensils", price: 200 },
-      { item: "Setup with mini balloons, confetti bag", price: 550 },
+      { item: "Setup with mini balloons, confetti bag", price: 550 }
     ],
     delivery: {
       "Delivery Time": "Same day delivery available",
@@ -158,7 +158,7 @@ const products = [
     { item: "Midnight snack basket (drinks & treats)", price: 800 },
     { item: "Mini bouquet with ribbon", price: 600 },
     { item: "Personalized handwritten love note", price: 300 },
-    { item: "Setup with balloons & rose petals", price: 500 }
+    { item: "Setup with balloons & rose petals", price: 500 },
     { item: "Personalized Gifts", price: 2000 }
   ],
   delivery: {
@@ -181,7 +181,7 @@ const products = [
     { item: "Personalized plant (engraved pot or tag)", price: 1000},
     { item: "Small succulent collection (3 mini plants)", price: 750 },
     { item: "Decor setup with floral elements and greenery", price: 850 },
-    { item: "Custom message card with romantic design", price: 300 },
+    { item: "Custom message card with romantic design", price: 300 }
   ],
   delivery: {
     "Delivery Time": "Scheduled delivery (advance booking required)",
@@ -266,6 +266,7 @@ if (product) {
     <p>Sorry, the product you're looking for was not found.</p>
   `;
 }
+
 
 
 
